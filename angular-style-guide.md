@@ -83,3 +83,8 @@ When a controller must be paired with a view and either component may be re-used
   <div>
   </div>
   ```
+  
+##Services
+
+###Singletons
+Services are instantiated with the new keyword, use this for public methods and variables. Since these are so similar to factories, use a factory instead for consistency.
