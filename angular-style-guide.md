@@ -43,3 +43,10 @@ Place bindable members at the top of the controller, alphabetized, and not sprea
 
 ###Function Declarations to Hide Implementation Details
 Use function declarations to hide implementation details. Keep your bindable members up top. When you need to bind a function in a controller, point it to a function declaration that appears later in the file. This is tied directly to the section Bindable Members Up Top.
+
+###Defer Controller Logic to Services
+Defer logic in a controller by delegating to services and factories.
+*Why?*: Logic may be reused by multiple controllers when placed within a service and exposed via a function.
+*Why?*: Logic in a service can more easily be isolated in a unit test, while the calling logic in the controller can be easily mocked.
+*Why?*: Removes dependencies and hides implementation details from the controller.
+*Why?*: Keeps the controller slim, trim, and focused.
