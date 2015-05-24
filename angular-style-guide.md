@@ -116,3 +116,23 @@ When calling a data service that returns a promise such as $http, return a promi
 ##Directives
 ###Limit 1 Per File
 Create one directive per file. Name the file for the directive.
+
+###Manipulate DOM in a Directive
+When manipulating the DOM directly, use a directive. If alternative ways can be used such as using CSS to set styles or the animation services, Angular templating, ngShow or ngHide, then use those instead. For example, if the directive simply hides and shows, use ngHide/ngShow.
+
+###Provide a Unique Directive Prefix
+Provide a short, unique and descriptive directive prefix such as acmeSalesCustomerInfo which would be declared in HTML as acme-sales-customer-info.
+
+###Restrict to Elements and Attributes
+When creating a directive that makes sense as a stand-alone element, allow restrict E (custom element) and optionally restrict A (custom attribute). Generally, if it could be its own control, E is appropriate. General guideline is allow EA but lean towards implementing as an element when it's stand-alone and as an attribute when it enhances its existing DOM element.
+
+###Directives and ControllerAs _REVIEW_
+Use controller as syntax with a directive to be consistent with using controller as with view and controller pairings.
+
+Use bindToController = true when using controller as syntax with a directive when you want to bind the outer scope to the directive's controller's scope.
+
+Note: bindToController was introduced in Angular 1.3.0.
+
+##Resolving Promises for a Controller
+###Controller Activation Promises
+Resolve start-up logic for a controller in an activate function.
