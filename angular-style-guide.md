@@ -148,17 +148,3 @@ Avoid using the shortcut syntax of declaring dependencies without using a minifi
 
 ###Manually Identify Dependencies
 Use `$inject` to manually identify your dependencies for Angular components.
-
-```javascript
-    /* recommended */
-    angular
-        .module('app')
-        .controller('Dashboard', Dashboard);
-
-    Dashboard.$inject = ['$location', '$routeParams', 'common', 'dataservice'];
-
-    function Dashboard($location, $routeParams, common, dataservice) {
-    }
- ```
-
-    Note: When your function is below a return statement the `$inject` may be unreachable (this may happen in a directive). You can solve this by moving the Controller outside of the directive.
