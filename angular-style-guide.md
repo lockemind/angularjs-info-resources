@@ -54,3 +54,32 @@ Defer logic in a controller by delegating to services and factories.
 *Why?*: Removes dependencies and hides implementation details from the controller.
 
 *Why?*: Keeps the controller slim, trim, and focused.
+
+###Keep Controllers Focused
+Define a controller for a view, and try not to reuse the controller for other views. Instead, move reusable logic to factories and keep the controller simple and focused on its view.
+
+###Assigning Controllers
+When a controller must be paired with a view and either component may be re-used by other controllers or views, define controllers along with their routes.
+ ```javascript
+  /* recommended */
+
+  // route-config.js
+  angular
+      .module('app')
+      .config(config);
+
+  function config($routeProvider) {
+      $routeProvider
+          .when('/avengers', {
+              templateUrl: 'avengers.html',
+              controller: 'Avengers',
+              controllerAs: 'vm'
+          });
+  }
+  ```
+
+  ```html
+  <!-- avengers.html -->
+  <div>
+  </div>
+  ```
