@@ -88,3 +88,18 @@ When a controller must be paired with a view and either component may be re-used
 
 ###Singletons
 Services are instantiated with the new keyword, use this for public methods and variables. Since these are so similar to factories, use a factory instead for consistency.
+
+Note: All Angular services are singletons. This means that there is only one instance of a given service per injector.
+
+##Factories
+###Single Responsibility
+Factories should have a single responsibility, that is encapsulated by its context. Once a factory begins to exceed that singular purpose, a new factory should be created.
+
+###Singletons
+Factories are singletons and return an object that contains the members of the service.
+
+Note: All Angular services are singletons.
+
+###Accessible Members Up Top
+Expose the callable members of the service (its interface) at the top, using a technique derived from the Revealing Module Pattern.
+
