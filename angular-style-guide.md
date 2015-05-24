@@ -24,3 +24,14 @@ Only set once and get for all other instances.
 *Why?*: A module should only be created once, then retrieved from that point and after.
   - Use `angular.module('app', []);` to set a module.
   - Use `angular.module('app');` to get a module.
+
+###Named vs Anonymous Functions
+Use named functions instead of passing an anonymous function in as a callback.
+
+##Controllers
+###controllerAs View Syntax
+Use the controllerAs syntax over the classic controller with $scope syntax.
+
+###controllerAs Controller Syntax
+- Use the controllerAs syntax over the classic controller with $scope syntax.
+- The controllerAs syntax uses this inside controllers which gets bound to $scope
