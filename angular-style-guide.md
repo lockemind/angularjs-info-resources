@@ -103,3 +103,16 @@ Note: All Angular services are singletons.
 ###Accessible Members Up Top
 Expose the callable members of the service (its interface) at the top, using a technique derived from the Revealing Module Pattern.
 
+###Function Declarations to Hide Implementation Details
+Use function declarations to hide implementation details. Keep your accessible members of the factory up top. Point those to function declarations that appears later in the file. 
+
+##Data Services
+###Separate Data Calls
+Refactor logic for making data operations and interacting with data to a factory. Make data services responsible for XHR calls, local storage, stashing in memory, or any other data operations.
+
+###Return a Promise from Data Calls
+When calling a data service that returns a promise such as $http, return a promise in your calling function too.
+
+##Directives
+###Limit 1 Per File
+Create one directive per file. Name the file for the directive.
