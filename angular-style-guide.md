@@ -136,3 +136,15 @@ Note: bindToController was introduced in Angular 1.3.0.
 ##Resolving Promises for a Controller
 ###Controller Activation Promises
 Resolve start-up logic for a controller in an activate function.
+
+##Route Resolve Promises
+When a controller depends on a promise to be resolved before the controller is activated, resolve those dependencies in the $routeProvider before the controller logic is executed. If you need to conditionally cancel a route before the controller is activated, use a route resolver.
+
+Use a route resolve when you want to decide to cancel the route before ever transitioning to the View.
+
+##Manual Annotating for Dependency Injection
+###UnSafe from Minification
+Avoid using the shortcut syntax of declaring dependencies without using a minification-safe approach.
+
+###Manually Identify Dependencies
+Use `$inject` to manually identify your dependencies for Angular components.
