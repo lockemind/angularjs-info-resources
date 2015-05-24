@@ -138,7 +138,7 @@ Note: bindToController was introduced in Angular 1.3.0.
 Resolve start-up logic for a controller in an activate function.
 
 ##Route Resolve Promises
-When a controller depends on a promise to be resolved before the controller is activated, resolve those dependencies in the $routeProvider before the controller logic is executed. If you need to conditionally cancel a route before the controller is activated, use a route resolver.
+When a controller depends on a promise to be resolved before the controller is activated, resolve those dependencies in the `$routeProvider` before the controller logic is executed. If you need to conditionally cancel a route before the controller is activated, use a route resolver.
 
 Use a route resolve when you want to decide to cancel the route before ever transitioning to the View.
 
@@ -148,3 +148,17 @@ Avoid using the shortcut syntax of declaring dependencies without using a minifi
 
 ###Manually Identify Dependencies
 Use `$inject` to manually identify your dependencies for Angular components.
+
+```javascript
+    /* recommended */
+    angular
+        .module('app')
+        .controller('Dashboard', Dashboard);
+
+    Dashboard.$inject = ['$location', '$routeParams', 'common', 'dataservice'];
+
+    function Dashboard($location, $routeParams, common, dataservice) {
+    }
+ ```
+
+    Note: When your function is below a return statement the `$inject` may be unreachable (this may happen in a directive). You can solve this by moving the Controller outside of the directive.
