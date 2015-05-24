@@ -46,7 +46,11 @@ Use function declarations to hide implementation details. Keep your bindable mem
 
 ###Defer Controller Logic to Services
 Defer logic in a controller by delegating to services and factories.
+
 *Why?*: Logic may be reused by multiple controllers when placed within a service and exposed via a function.
+
 *Why?*: Logic in a service can more easily be isolated in a unit test, while the calling logic in the controller can be easily mocked.
+
 *Why?*: Removes dependencies and hides implementation details from the controller.
+
 *Why?*: Keeps the controller slim, trim, and focused.
