@@ -148,3 +148,7 @@ Avoid using the shortcut syntax of declaring dependencies without using a minifi
 
 ###Manually Identify Dependencies
 Use `$inject` to manually identify your dependencies for Angular components.
+
+###Manually Identify Route Resolver Dependencies
+Use `$inject` to manually identify your route resolver dependencies for Angular components.
+
