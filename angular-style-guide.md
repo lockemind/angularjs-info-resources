@@ -33,5 +33,13 @@ Use named functions instead of passing an anonymous function in as a callback.
 Use the controllerAs syntax over the classic controller with $scope syntax.
 
 ###controllerAs Controller Syntax
-- Use the controllerAs syntax over the classic controller with $scope syntax.
-- The controllerAs syntax uses this inside controllers which gets bound to $scope
+The controllerAs syntax uses this inside controllers which gets bound to $scope
+
+###controllerAs with vm
+Use a capture variable for this when using the controllerAs syntax. Choose a consistent variable name such as vm, which stands for ViewModel.
+
+###Bindable Members Up Top
+Place bindable members at the top of the controller, alphabetized, and not spread through the controller code.
+
+###Function Declarations to Hide Implementation Details
+Use function declarations to hide implementation details. Keep your bindable members up top. When you need to bind a function in a controller, point it to a function declaration that appears later in the file. This is tied directly to the section Bindable Members Up Top.
