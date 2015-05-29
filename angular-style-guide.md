@@ -302,4 +302,4 @@ app/
         sessions.routes.js
         session-detail.html
         session-detail.controller.js
-    ```
+   ```
