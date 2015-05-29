@@ -244,3 +244,62 @@ When I find my structure is not feeling comfortable, I go back and revisit these
 * `F`lat structure as long as we can
 * `T`ry to stay DRY (Don’t Repeat Yourself) or T-DRY
 
+###Locate
+Make locating your code intuitive, simple and fast.
+
+###Identify
+When you look at a file you should instantly know what it contains and represents.
+
+###Flat
+Keep a flat folder structure as long as possible. When you get to 7+ files, begin considering separation.
+
+###T-DRY (Try to Stick to DRY)
+Be DRY, but don't go nuts and sacrifice readability.
+
+##Application Structure
+###Overall Guidelines
+Have a near term view of implementation and a long term vision. In other words, start small but keep in mind on where the app is heading down the road. All of the app's code goes in a root folder named app. All content is 1 feature per file. Each controller, service, module, view is in its own file. All 3rd party vendor scripts are stored in another root folder and not in the app folder. I didn't write them and I don't want them cluttering my app (bower_components, scripts, lib).
+
+###Layout
+Place components that define the overall layout of the application in a folder named layout. These may include a shell view and controller may act as the container for the app, navigation, menus, content areas, and other regions.
+
+###Folders-by-Feature Structure
+Create folders named for the feature they represent. When a folder grows to contain more than 7 files, start to consider creating a folder for them. Your threshold may be different, so adjust as needed.
+```javascript
+/**
+ * recommended
+ */
+
+app/
+    app.module.js
+    app.config.js
+    components/
+        calendar.directive.js
+        calendar.directive.html
+        user-profile.directive.js
+        user-profile.directive.html
+    layout/
+        shell.html
+        shell.controller.js
+        topnav.html
+        topnav.controller.js
+    people/
+        attendees.html
+        attendees.controller.js
+        people.routes.js
+        speakers.html
+        speakers.controller.js
+        speaker-detail.html
+        speaker-detail.controller.js
+    services/
+        data.service.js
+        localstorage.service.js
+        logger.service.js
+        spinner.service.js
+    sessions/
+        sessions.html
+        sessions.controller.js
+        sessions.routes.js
+        session-detail.html
+        session-detail.controller.js
+    ```
