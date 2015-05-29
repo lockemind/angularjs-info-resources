@@ -207,4 +207,14 @@ avengers.config.js
 avenger-profile.directive.js
 avenger-profile.directive.spec.js
  ```
+###Test File Names
+Name test specifications similar to the component they test with a suffix of spec.
  
+###Controller Names
+Use consistent names for all controllers named after their feature. Use UpperCamelCase for controllers, as they are constructors.
+
+###Controller Name Suffix
+Append the controller name with the suffix Controller.
+
+###Factory Names
+Use consistent names for all factories named after their feature. Use camel-casing for services and factories. Avoid prefixing factories and services with `$.`
