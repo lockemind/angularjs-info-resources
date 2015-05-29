@@ -33,3 +33,29 @@ Use Jasmine or Mocha for unit testing.
 
 Note: When using Mocha, also consider choosing an assert library such as Chai. I prefer Mocha.
 
+###Test Runner
+Use Karma as a test runner.
+
+###Stubbing and Spying
+Use Sinon for stubbing and spying.
+
+###Headless Browser
+Use PhantomJS to run your tests on a server.
+
+###Code Analysis
+Run JSHint on your tests.
+
+###Alleviate Globals for JSHint Rules on Tests
+Relax the rules on your test code to allow for common globals such as describe and expect. Relax the rules for expressions, as Mocha uses these.
+
+Why?: Your tests are code and require the same attention and code quality rules as all of your production code. However, global variables used by the testing framework, for example, can be relaxed by including this in your test specs.
+
+/* jshint -W117, -W030 */
+Or you can add the following to your JSHint Options file.
+
+"jasmine": true,
+"mocha": true,
+
+###Organizing Tests
+Place unit test files (specs) side-by-side with your client code. Place specs that cover server integration or test multiple components in a separate tests folder.
+
