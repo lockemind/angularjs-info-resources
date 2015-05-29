@@ -399,3 +399,19 @@ Use animate.css for conventional animations.
 ###jsDoc
 If planning to produce documentation, use jsDoc syntax to document function names, description, params and returns. Use @namespace and @memberOf to match your app structure.
 
+##JS Hint
+###Use an Options File
+Use JS Hint for linting your JavaScript and be sure to customize the JS Hint options file and include in source control. See the JS Hint docs for details on the options.
+
+##JSCS
+###Use an Options File
+Use JSCS for checking your coding styles your JavaScript and be sure to customize the JSCS options file and include in source control. See the JSCS docs for details on the options.
+
+##Constants
+###Vendor Globals
+Create an Angular Constant for vendor libraries' global variables.
+
+*Why?*: Provides a way to inject vendor libraries that otherwise are globals. This improves code testability by allowing you to more easily know what the dependencies of your components are (avoids leaky abstractions). It also allows you to mock these dependencies, where it makes sense.
+
+Use constants for values that do not change and do not come from another service. When constants are used only for a module that may be reused in multiple applications, place constants in a file per module named after the module. Until this is required, keep constants in the main module in a constants.js file.
+
