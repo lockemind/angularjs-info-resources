@@ -314,3 +314,11 @@ Create small modules that encapsulate one responsibility.
 Create an application root module whose role is pull together all of the modules and features of your application. Name this for your application.
 
 *Why?*: Angular encourages modularity and separation patterns. Creating an application root module whose role is to tie your other modules together provides a very straightforward way to add or remove modules from your application.
+
+###Keep the App Module Thin
+Only put logic for pulling together the app in the application module. Leave features in their own modules.
+
+*Why?*: Adding additional roles to the application root to get remote data, display views, or other logic not related to pulling the app together muddies the app module and make both sets of features harder to reuse or turn off.
+
+*Why?*: The app module becomes a manifest that describes which modules help define the application.
+
