@@ -322,3 +322,19 @@ Only put logic for pulling together the app in the application module. Leave fea
 
 *Why?*: The app module becomes a manifest that describes which modules help define the application.
 
+###Feature Areas are Modules
+Create modules that represent feature areas, such as layout, reusable and shared services, dashboards, and app specific features (e.g. customers, admin, sales).
+
+*Why?*: Self contained modules can be added to the application with little or no friction.
+
+*Why?*: Sprints or iterations can focus on feature areas and turn them on at the end of the sprint or iteration.
+
+*Why?*: Separating feature areas into modules makes it easier to test the modules in isolation and reuse code.
+
+###Reusable Blocks are Modules
+Create modules that represent reusable application blocks for common services such as exception handling, logging, diagnostics, security, and local data stashing.
+
+###Module Dependencies
+The application root module depends on the app specific feature modules and any shared or reusable modules.
+
+![Modularity and Dependencies](https://raw.githubusercontent.com/johnpapa/angular-styleguide/master/assets/modularity-1.png)
