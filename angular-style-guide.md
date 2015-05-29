@@ -368,5 +368,14 @@ function configure (routerHelperProvider, exceptionHandlerProvider, toastr) {
         });
     }
 }
- ````
+ ```
+###Run Blocks
+Any code that needs to run when an application starts should be declared in a factory, exposed via a function, and injected into the run block.
 
+*Why?*: Code directly in a run block can be difficult to test. Placing in a factory makes it easier to abstract and mock. 
+ 
+##Angular $ Wrapper Services
+###$document and $window
+Use `$document` and `$window` instead of document and window.
+
+*Why?*: These services are wrapped by Angular and more easily testable than using document and window in tests. This helps you avoid having to mock document and window yourself.
