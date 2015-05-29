@@ -303,3 +303,9 @@ app/
         session-detail.html
         session-detail.controller.js
    ```
+   
+##Modularity
+###Many Small, Self Contained Modules
+Create small modules that encapsulate one responsibility.
+
+*Why?*: Modular applications make it easy to plug and go as they allow the development teams to build vertical slices of the applications and roll out incrementally. This means we can plug in new features as we develop them.
