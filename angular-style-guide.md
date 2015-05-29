@@ -338,3 +338,35 @@ Create modules that represent reusable application blocks for common services su
 The application root module depends on the app specific feature modules and any shared or reusable modules.
 
 ![Modularity and Dependencies](https://raw.githubusercontent.com/johnpapa/angular-styleguide/master/assets/modularity-1.png)
+
+##Startup Logic
+###Configuration
+Inject code into module configuration that must be configured before running the angular app. Ideal candidates include providers and constants.
+
+*Why?*: This makes it easier to have a less places for configuration.
+
+```javascript
+angular
+    .module('app')
+    .config(configure);
+
+configure.$inject =
+    ['routerHelperProvider', 'exceptionHandlerProvider', 'toastr'];
+
+function configure (routerHelperProvider, exceptionHandlerProvider, toastr) {
+    exceptionHandlerProvider.configure(config.appErrorPrefix);
+    configureStateHelper();
+
+    toastr.options.timeOut = 4000;
+    toastr.options.positionClass = 'toast-bottom-right';
+
+    ////////////////
+
+    function configureStateHelper() {
+        routerHelperProvider.configure({
+            docTitle: 'NG-Modular: '
+        });
+    }
+}
+ ````
+
