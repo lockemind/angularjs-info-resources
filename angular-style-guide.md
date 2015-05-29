@@ -175,3 +175,36 @@ Use consistent names for all components following a pattern that describes the c
 * the file name (avengers.controller.js)
 * the registered component name with Angular (AvengersController)
 
+###Feature File Names
+Use consistent names for all components following a pattern that describes the component's feature then (optionally) its type. My recommended pattern is feature.type.js.
+ ```javascript
+/**
+ * recommended
+ */
+
+// controllers
+avengers.controller.js
+avengers.controller.spec.js
+
+// services/factories
+logger.service.js
+logger.service.spec.js
+
+// constants
+constants.js
+
+// module definition
+avengers.module.js
+
+// routes
+avengers.routes.js
+avengers.routes.spec.js
+
+// configuration
+avengers.config.js
+
+// directives
+avenger-profile.directive.js
+avenger-profile.directive.spec.js
+ ```
+ 
