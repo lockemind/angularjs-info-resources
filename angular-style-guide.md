@@ -503,3 +503,27 @@ Client-side routing is important for creating a navigation flow between views an
 
     *Why?*: This makes it easy to enable or disable portions of an application without concern over orphaned routes.
 
+## Task Automation
+Use [Gulp](http://gulpjs.com) or [Grunt](http://gruntjs.com) for creating automated tasks.  Gulp leans to code over configuration while Grunt leans to configuration over code.
+
+  - Use task automation to list module definition files `*.module.js` before all other application JavaScript files.
+
+    *Why?*: Angular needs the module definitions to be registered before they are used.
+
+    *Why?*: Naming modules with a specific pattern such as `*.module.js` makes it easy to grab them with a glob and list them first.
+
+    ```javascript
+    var clientApp = './src/client/app/';
+
+    // Always grab module files first
+    var files = [
+      clientApp + '**/*.module.js',
+      clientApp + '**/*.js'
+    ];
+    ```
+
+## Filters
+
+  - Avoid using filters for scanning all properties of a complex object graph. Use filters for select properties.
+
+    *Why?*: Filters can easily be abused and negatively effect performance if not used wisely, for example when a filter hits a large and deep object graph.
