@@ -152,3 +152,7 @@ Use `$inject` to manually identify your dependencies for Angular components.
 ###Manually Identify Route Resolver Dependencies
 Use `$inject` to manually identify your route resolver dependencies for Angular components.
 
+##Minification and Annotation
+###ng-annotate
+Use ng-annotate for Gulp or Grunt and comment functions that need automated dependency injection using /** @ngInject */
+
