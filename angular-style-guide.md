@@ -379,3 +379,9 @@ Any code that needs to run when an application starts should be declared in a fa
 Use `$document` and `$window` instead of document and window.
 
 *Why?*: These services are wrapped by Angular and more easily testable than using document and window in tests. This helps you avoid having to mock document and window yourself.
+
+###$timeout and $interval
+Use `$timeout` and `$interval` instead of setTimeout and setInterval .
+
+*Why?*: These services are wrapped by Angular and more easily testable and handle Angular's digest cycle thus keeping data binding in sync.
+
