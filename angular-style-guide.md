@@ -156,10 +156,16 @@ Use `$inject` to manually identify your route resolver dependencies for Angular 
 ###ng-annotate
 Use ng-annotate for Gulp or Grunt and comment functions that need automated dependency injection using /** @ngInject */
 
-##Use Gulp or Grunt for ng-annotate
+###Use Gulp or Grunt for ng-annotate
 Use gulp-ng-annotate or grunt-ng-annotate in an automated build task. Inject /* @ngInject */ prior to any function that has dependencies.
 
 ##Exception Handling
 ###decorators
 Use a decorator, at config time using the $provide service, on the $exceptionHandler service to perform custom actions when exceptions occur.
+
+###Exception Catchers
+Create a factory that exposes an interface to catch and gracefully handle exceptions.
+
+###Route Errors
+Handle and log all routing errors using `$routeChangeError`.
 
