@@ -26,3 +26,10 @@ it('should return Avengers via XHR', function() {
 // and so on
  ```
 
+###Testing Library
+Use Jasmine or Mocha for unit testing.
+
+*Why?*: Both Jasmine and Mocha are widely used in the Angular community. Both are stable, well maintained, and provide robust testing features.
+
+Note: When using Mocha, also consider choosing an assert library such as Chai. I prefer Mocha.
+
