@@ -217,4 +217,30 @@ Use consistent names for all controllers named after their feature. Use UpperCam
 Append the controller name with the suffix Controller.
 
 ###Factory Names
-Use consistent names for all factories named after their feature. Use camel-casing for services and factories. Avoid prefixing factories and services with `$.`
+Use consistent names for all factories named after their feature. Use camel-casing for services and factories. Avoid prefixing factories and services with `$`.
+
+###Directive Component Names
+Use consistent names for all directives using camel-case. Use a short prefix to describe the area that the directives belong (some example are company prefix or project prefix).
+
+###Modules
+When there are multiple modules, the main module file is named app.module.js while other dependent modules are named after what they represent. For example, an admin module is named admin.module.js. The respective registered module names would be app and admin.
+
+###Configuration
+Separate configuration for a module into its own file named after the module. A configuration file for the main app module is named app.config.js (or simply config.js). A configuration for a module named admin.module.js is named admin.config.js.
+
+###Routes
+Separate route configuration into its own file. Examples might be app.route.js for the main module and admin.route.js for the admin module. Even in smaller apps I prefer this separation from the rest of the configuration.
+
+##Application Structure LIFT Principle
+###LIFT
+Structure your app such that you can Locate your code quickly, Identify the code at a glance, keep the Flattest structure you can, and Try to stay DRY. The structure should follow these 4 basic guidelines.
+
+Why LIFT?: Provides a consistent structure that scales well, is modular, and makes it easier to increase developer efficiency by finding code quickly. Another way to check your app structure is to ask yourself: How quickly can you open and work in all of the related files for a feature?
+
+When I find my structure is not feeling comfortable, I go back and revisit these LIFT guidelines
+
+* `L`ocating our code is easy
+* `I`dentify code at a glance
+* `F`lat structure as long as we can
+* `T`ry to stay DRY (Don’t Repeat Yourself) or T-DRY
+
