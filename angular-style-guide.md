@@ -385,3 +385,17 @@ Use `$timeout` and `$interval` instead of setTimeout and setInterval .
 
 *Why?*: These services are wrapped by Angular and more easily testable and handle Angular's digest cycle thus keeping data binding in sync.
 
+##Animations
+###Usage
+Use subtle animations with Angular to transition between states for views and primary visual elements. Include the ngAnimate module. The 3 keys are subtle, smooth, seamless.
+
+###Sub Second
+Use short durations for animations. I generally start with 200ms and adjust until appropriate.
+
+###animate.css
+Use animate.css for conventional animations.
+
+##Comments
+###jsDoc
+If planning to produce documentation, use jsDoc syntax to document function names, description, params and returns. Use @namespace and @memberOf to match your app structure.
+
