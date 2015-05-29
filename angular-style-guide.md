@@ -169,3 +169,9 @@ Create a factory that exposes an interface to catch and gracefully handle except
 ###Route Errors
 Handle and log all routing errors using `$routeChangeError`.
 
+##Naming
+###Naming Guidelines
+Use consistent names for all components following a pattern that describes the component's feature then (optionally) its type. My recommended pattern is feature.type.js. There are 2 names for most assets:
+* the file name (avengers.controller.js)
+* the registered component name with Angular (AvengersController)
+
